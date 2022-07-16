@@ -4,7 +4,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        nums.sort()
+        # nums.sort()
         sums = sum(nums)
         temp = (len(nums) * (len(nums) + 1)) // 2
         return temp - sums
