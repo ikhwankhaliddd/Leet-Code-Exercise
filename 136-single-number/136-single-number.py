@@ -6,5 +6,5 @@ class Solution(object):
         """
         for i in range(len(nums)):
             if nums.count(nums[i])== 1:
-                return nums[i]
-        return 0
+                break
+        return nums[i]
