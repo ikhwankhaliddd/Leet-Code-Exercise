@@ -8,5 +8,5 @@ class Solution:
             concat = "".join(temp)
             concat = int(concat)
         
-        return pow(a, concat, mod = 1337)
+        return pow(a,concat, mod = 1337)
         
