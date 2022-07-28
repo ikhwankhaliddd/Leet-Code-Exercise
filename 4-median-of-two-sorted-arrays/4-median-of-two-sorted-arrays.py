@@ -1,11 +1,6 @@
-class Solution(object):
-    def findMedianSortedArrays(self, nums1, nums2):
-        """
-        :type nums1: List[int]
-        :type nums2: List[int]
-        :rtype: float
-        """
-        import numpy as np
-        arr = nums1 + nums2
+class Solution:
+    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+        import statistics as stat
         
-        return float(np.median(arr))
+        arr = nums1 + nums2
+        return float(stat.median(arr))
