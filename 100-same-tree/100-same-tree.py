@@ -12,7 +12,7 @@ class Solution(object):
         :rtype: bool
         """
         if p is None and q is None :
-            return 1
+            return True
         elif p is not None and q is not None:
             return (
                 (p.val == q.val) and
