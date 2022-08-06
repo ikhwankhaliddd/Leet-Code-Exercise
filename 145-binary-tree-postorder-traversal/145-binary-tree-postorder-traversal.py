@@ -12,13 +12,11 @@ class Solution(object):
         """
         ans = []
         
-        def traversePostOrder(root):
+        def traversalPostOrder(root):
             if root is None:
                 return
-            traversePostOrder(root.left)
-            traversePostOrder(root.right)
+            traversalPostOrder(root.left)
+            traversalPostOrder(root.right)
             ans.append(root.val)
-            
-        traversePostOrder(root)
-        
+        traversalPostOrder(root)
         return ans
