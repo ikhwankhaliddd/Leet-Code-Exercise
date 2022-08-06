@@ -10,17 +10,15 @@ class Solution(object):
         :type root: TreeNode
         :rtype: List[int]
         """
-        
         ans = []
         
-        def traverseInOrder(root):
+        def traverseInorder(root):
             if root is None:
                 return
-            traverseInOrder(root.left)
+            traverseInorder(root.left)
             ans.append(root.val)
-            traverseInOrder(root.right)
+            traverseInorder(root.right)
             
-        traverseInOrder(root)
-        
+        traverseInorder(root)
         return ans
         
