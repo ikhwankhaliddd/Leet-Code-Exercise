@@ -18,5 +18,4 @@ class Solution(object):
             traversePreOrder(root.left)
             traversePreOrder(root.right)
         traversePreOrder(root)
-        
         return ans
