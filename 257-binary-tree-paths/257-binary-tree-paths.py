@@ -11,16 +11,16 @@ class Solution(object):
         :rtype: List[str]
         """
         ans = []
-        def traversePreOrder(root,path):
+        def traverseDFS(root,path):
             if not root.left and not root.right:
                 path += str(root.val)
                 ans.append(path)
                 return
             if root.left:
-                traversePreOrder(root.left, path + str(root.val)+ "->")
+                traverseDFS(root.left, path + str(root.val)+ "->")
             if root.right:
-                traversePreOrder(root.right, path + str(root.val) + "->")
+                traverseDFS(root.right, path + str(root.val) + "->")
             return
-        traversePreOrder(root,"")
+        traverseDFS(root,"")
         return ans
         
