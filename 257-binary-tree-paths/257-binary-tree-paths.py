@@ -11,16 +11,16 @@ class Solution(object):
         :rtype: List[str]
         """
         ans = []
-        def traversePreorder(root,path):
+        def traversePreOrder(root,path):
             if not root.left and not root.right:
                 path += str(root.val)
                 ans.append(path)
                 return
             if root.left:
-                traversePreorder(root.left, path + str(root.val)+ "->")
+                traversePreOrder(root.left, path + str(root.val)+ "->")
             if root.right:
-                traversePreorder(root.right, path + str(root.val) + "->")
+                traversePreOrder(root.right, path + str(root.val) + "->")
             return
-        traversePreorder(root,"")
+        traversePreOrder(root,"")
         return ans
         
