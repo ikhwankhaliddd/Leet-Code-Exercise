@@ -1,10 +1,5 @@
-class Solution(object):
-    def getLucky(self, s, k):
-        """
-        :type s: str
-        :type k: int
-        :rtype: int
-        """
+class Solution:
+    def getLucky(self, s: str, k: int) -> int:
         al = 'abcdefghijklmnopqrstuvwxyz'
         result = ''
         for j in s:
@@ -12,5 +7,3 @@ class Solution(object):
         for i in range(k):
             result = str(sum(int(l) for l in result))
         return result
-            
-            
