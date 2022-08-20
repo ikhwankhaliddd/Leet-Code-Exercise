@@ -8,7 +8,7 @@ class Solution(object):
         al = 'abcdefghijklmnopqrstuvwxyz'
         result = ''
         for j in s:
-            result = ''.join(str(ord(c) - 96) for c in s)
+            result += str(al.index(j) + 1) 
         for i in range(k):
             result = str(sum(int(l) for l in result))
         return result
