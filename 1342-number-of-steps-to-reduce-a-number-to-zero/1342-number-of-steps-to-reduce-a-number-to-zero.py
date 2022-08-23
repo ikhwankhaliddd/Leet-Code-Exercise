@@ -4,16 +4,14 @@ class Solution(object):
         :type num: int
         :rtype: int
         """
+        count = 0
         
-        temp = []
-        
-        while num > 0:
-            if num % 2 ==  0:
-                temp.append(num)
-                num /= 2
-            elif num % 2 == 1 :
-                temp.append(num)
+        while num != 0 :
+            if num % 2 :
                 num -= 1
-        return len(temp)
+            else:
+                num /= 2
+            count += 1
+        return count
                 
         
