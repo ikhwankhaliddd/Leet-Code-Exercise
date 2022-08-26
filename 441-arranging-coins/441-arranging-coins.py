@@ -8,7 +8,7 @@ class Solution(object):
         high = n
         
         while low <= high:
-            mid = low + (high - low) // 2
+            mid = (low + high) // 2
         
             temp = mid * (mid + 1) // 2
             
