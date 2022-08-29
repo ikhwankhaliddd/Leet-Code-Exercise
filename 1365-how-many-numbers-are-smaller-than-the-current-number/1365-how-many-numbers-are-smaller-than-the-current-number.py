@@ -11,6 +11,6 @@ class Solution(object):
         for i in range(len(temp)):
             if temp[i] not in hashMap:
                 hashMap[temp[i]] = i
-        for i in nums:
-            res.append(hashMap[i])
+        for i in range(len(nums)):
+            res.append(hashMap[nums[i]])
         return res
