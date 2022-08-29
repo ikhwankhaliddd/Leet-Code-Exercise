@@ -1,5 +1,9 @@
-class Solution:
-    def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
+class Solution(object):
+    def smallerNumbersThanCurrent(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
         
         temp = sorted(nums)
         hashMap = {}
@@ -10,4 +14,3 @@ class Solution:
         for i in nums:
             res.append(hashMap[i])
         return res
-            
