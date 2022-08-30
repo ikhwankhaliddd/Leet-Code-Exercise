@@ -4,5 +4,5 @@ class Solution(object):
         :type matrix: List[List[int]]
         :rtype: None Do not return anything, modify matrix in-place instead.
         """
-        matrix[:] = zip(*matrix[::-1])
+        matrix[:] = map(list,zip(*matrix[::-1]))
         
