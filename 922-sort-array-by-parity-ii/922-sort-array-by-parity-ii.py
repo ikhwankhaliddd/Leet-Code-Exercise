@@ -7,7 +7,7 @@ class Solution(object):
         even = 0
         odd = 1
         
-        while even < len(nums) and odd < len(nums):
+        while (even < len(nums)) and (odd < len(nums)):
             
             if nums[even] % 2 == 0:
                 even += 2
