@@ -10,11 +10,11 @@ class Solution(object):
         :type head: ListNode
         :rtype: bool
         """
-        walker = head
+        node = set()
         
-        while(walker):
-            if walker.val is None:
+        while head is not None:
+            if head in node:
                 return True
-            walker.val = None
-            walker = walker.next
+            node.add(head)
+            head = head.next
         return False
