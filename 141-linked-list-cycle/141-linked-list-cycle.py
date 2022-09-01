@@ -10,10 +10,10 @@ class Solution(object):
         :type head: ListNode
         :rtype: bool
         """
-        hashMap = []
+        lst = []
         while head is not None:
-            if head in hashMap:
+            if head in lst:
                 return True
-            hashMap.append(head)
+            lst.append(head)
             head = head.next
         return False
