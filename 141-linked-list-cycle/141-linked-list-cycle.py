@@ -10,22 +10,12 @@ class Solution(object):
         :type head: ListNode
         :rtype: bool
         """
-        # lst = []
-        # while head is not None:
-        #     if head in lst:
-        #         return True
-        #     lst.append(head)
-        #     head = head.next
-        # return False
+        walker = runner = head
         
-        try:
-            walker = head
-            runner = head.next
-
-            while walker is not runner:
-                walker = walker.next
-                runner = runner.next.next
-            return True
-    
-        except:
-            return False
+        while runner and runner.next:
+            runner = runner.next.next
+            walker = walker.next
+            if walker is runner:
+                return True
+        return False
+            
