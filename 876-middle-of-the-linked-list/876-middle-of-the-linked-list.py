@@ -10,11 +10,11 @@ class Solution(object):
         :rtype: ListNode
         """
         
-        walker = head
-        runner = head
+        tur = head
+        hare = head
         
-        while runner != None and runner.next != None:
-            walker = walker.next
-            runner = runner.next.next
-        return walker
+        while hare != None and hare.next != None:
+            tur = tur.next
+            hare = hare.next.next
+        return tur
         
