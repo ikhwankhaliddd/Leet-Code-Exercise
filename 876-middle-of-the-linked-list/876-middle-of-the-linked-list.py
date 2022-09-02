@@ -10,11 +10,10 @@ class Solution(object):
         :rtype: ListNode
         """
         
-        turto = head
-        rabb = head
+        turt = rabb = head
         
-        while rabb != None and rabb.next != None:
-            turto = turto.next
+        while rabb is not None and rabb.next is not None:
+            turt = turt.next
             rabb = rabb.next.next
-        return turto
+        return turt
         
