@@ -10,7 +10,8 @@ class Solution(object):
         :rtype: ListNode
         """
         
-        walker = runner = head
+        walker = head
+        runner = head
         
         while runner and runner.next:
             walker = walker.next
