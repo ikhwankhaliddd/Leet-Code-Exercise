@@ -13,7 +13,7 @@ class Solution(object):
         walker = head
         runner = head
         
-        while runner and runner.next:
+        while runner is not None and runner.next is not None:
             walker = walker.next
             runner = runner.next.next
         return walker
