@@ -10,14 +10,14 @@ class Solution(object):
         :type nums: List[int]
         :rtype: TreeNode
         """
-        def arrToBST(arr):
-            if arr == []:
-                return None
-            n = len(arr)
-            mid = n // 2
-            root = TreeNode(arr[mid])
-            root.left = arrToBST(arr[:mid])
-            root.right = arrToBST(arr[mid + 1:])
-            
-            return root
-        return arrToBST(nums)
+        if len(nums) == 0:
+            return None
+        low = 0
+        high = len(nums) - 1
+        mid = low + (high - low) // 2
+        root = TreeNode(nums[mid])
+
+        root.left = self.sortedArrayToBST(nums[:mid])
+        root.right = self.sortedArrayToBST(nums[mid + 1:])
+
+        return root
