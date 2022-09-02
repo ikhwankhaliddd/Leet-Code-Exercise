@@ -11,10 +11,10 @@ class Solution(object):
         """
         
         turto = head
-        hare = head
+        rabb = head
         
-        while hare != None and hare.next != None:
+        while rabb != None and rabb.next != None:
             turto = turto.next
-            hare = hare.next.next
+            rabb = rabb.next.next
         return turto
         
