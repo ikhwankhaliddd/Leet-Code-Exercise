@@ -5,7 +5,7 @@
 #         self.left = left
 #         self.right = right
 class Solution(object):
-    sum = 0
+    result = 0
     def rangeSumBST(self, root, low, high):
         """
         :type root: TreeNode
@@ -14,9 +14,9 @@ class Solution(object):
         :rtype: int
         """
         
-        self.sum = 0
+        self.result = 0
         self.InorderTraversal(root,low,high)
-        return self.sum
+        return self.result
     
     def InorderTraversal(self,root,left,right):
         if not root:
@@ -27,8 +27,9 @@ class Solution(object):
         
         if left <= root.val <= right:
             self.InorderTraversal(root.left,left,right)
-            self.sum += root.val
+            self.result += root.val
             self.InorderTraversal(root.right,left,right)
+            
         if left > root.val:
             self.InorderTraversal(root.right,left,right)
         
