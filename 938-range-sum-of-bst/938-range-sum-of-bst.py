@@ -13,14 +13,16 @@ class Solution(object):
         :rtype: int
         """
         
-        if root:
-            if root.val > high:
-                return self.rangeSumBST(root.left,low,high)
-            
-            if root.val < low:
-                return self.rangeSumBST(root.right,low,high)
-            
-            return root.val + self.rangeSumBST(root.left,low,high) + self.rangeSumBST(root.right,low,high)
-        if not root:
+        if not root :
             return 0
+        
+        ans = root.val if low <= root.val <= high else 0
+        
+        if root.val >= high:
+            return ans  + self.rangeSumBST(root.left,low,high)
+            
+        if root.val <= low:
+            return ans + self.rangeSumBST(root.right,low,high)
+            
+        return ans + self.rangeSumBST(root.left,low,high) + self.rangeSumBST(root.right,low,high)
         
