@@ -17,11 +17,11 @@ class Solution(object):
             return 0
         
         result = root.val if low <= root.val <= high else 0
-#         if root.val >= high:
-#             return ans  + self.rangeSumBST(root.left,low,high)
+        if root.val >= high:
+            return result  + self.rangeSumBST(root.left,low,high)
             
-#         if root.val <= low:
-#             return ans + self.rangeSumBST(root.right,low,high)
+        if root.val <= low:
+            return result + self.rangeSumBST(root.right,low,high)
             
         return result + self.rangeSumBST(root.left,low,high) + self.rangeSumBST(root.right,low,high)
         
