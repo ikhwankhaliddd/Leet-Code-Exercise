@@ -24,5 +24,5 @@ class Solution(object):
         if root.val <= low:
             return RangeSumResult + self.rangeSumBST(root.right,low,high)
             
-        return RangeSumResult + self.rangeSumBST(root.left,low,high) + self.rangeSumBST(root.right,low,high)
+        return self.rangeSumBST(root.left,low,high) + self.rangeSumBST(root.right,low,high) + RangeSumResult
         
