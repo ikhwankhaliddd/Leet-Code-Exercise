@@ -5,7 +5,6 @@
 #         self.left = left
 #         self.right = right
 class Solution(object):
-    result = 0
     def rangeSumBST(self, root, low, high):
         """
         :type root: TreeNode
@@ -17,13 +16,13 @@ class Solution(object):
         if not root :
             return 0
         
-        ans = root.val if low <= root.val <= high else 0
+        RangeSumResult = root.val if low <= root.val <= high else 0
         
         if root.val >= high:
-            return ans  + self.rangeSumBST(root.left,low,high)
+            return RangeSumResult  + self.rangeSumBST(root.left,low,high)
             
         if root.val <= low:
-            return ans + self.rangeSumBST(root.right,low,high)
+            return RangeSumResult + self.rangeSumBST(root.right,low,high)
             
-        return ans + self.rangeSumBST(root.left,low,high) + self.rangeSumBST(root.right,low,high)
+        return RangeSumResult + self.rangeSumBST(root.left,low,high) + self.rangeSumBST(root.right,low,high)
         
