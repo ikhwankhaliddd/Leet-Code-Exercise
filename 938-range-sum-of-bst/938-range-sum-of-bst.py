@@ -21,6 +21,6 @@ class Solution(object):
                 return self.rangeSumBST(root.right,low,high)
             
             return root.val + self.rangeSumBST(root.left,low,high) + self.rangeSumBST(root.right,low,high)
-        else:
+        if not root:
             return 0
         
