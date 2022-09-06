@@ -12,17 +12,16 @@ class Solution(object):
         :type high: int
         :rtype: int
         """
-        ans = 0 
         
-        
-        if root is None:
+        if not root :
             return 0
         
-        
-        if root.val >= low and root.val <= high:
-            ans = ans + root.val
-        ans = ans + self.rangeSumBST(root.left,low,high)
-        ans = ans + self.rangeSumBST(root.right,low,high)
-        
-        return ans
+        ans = root.val if low <= root.val <= high else 0
+        if root.val >= high:
+            return ans  + self.rangeSumBST(root.left,low,high)
+            
+        if root.val <= low:
+            return ans + self.rangeSumBST(root.right,low,high)
+            
+        return ans + self.rangeSumBST(root.left,low,high) + self.rangeSumBST(root.right,low,high)
         
