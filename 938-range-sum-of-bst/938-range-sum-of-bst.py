@@ -19,7 +19,7 @@ class Solution(object):
         RangeSumResult = root.val if low <= root.val <= high else 0
         
         if root.val >= high:
-            return RangeSumResult  + self.rangeSumBST(root.left,low,high)
+            return self.rangeSumBST(root.left,low,high) + RangeSumResult 
             
         if root.val <= low:
             return self.rangeSumBST(root.right,low,high) + RangeSumResult
