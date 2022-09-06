@@ -12,10 +12,12 @@ class Solution(object):
         :type high: int
         :rtype: int
         """
+        ans = 0 
+        
+        
         if root is None:
             return 0
         
-        ans = 0
         
         if root.val >= low and root.val <= high:
             ans = ans + root.val
