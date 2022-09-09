@@ -4,11 +4,11 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        arr = [0,1,1]
+        tribonacci_list = [0,1,1]
         if n < 2:
-            return arr[n]
+            return tribonacci_list[n]
         else:
             for ans in range(n-2):
-                arr.append(sum(arr))
-                arr.pop(0)
-            return arr.pop()
+                tribonacci_list.append(sum(tribonacci_list))
+                tribonacci_list.pop(0)
+            return tribonacci_list.pop()
