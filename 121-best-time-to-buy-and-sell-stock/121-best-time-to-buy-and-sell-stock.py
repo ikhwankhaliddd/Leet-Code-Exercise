@@ -9,8 +9,7 @@ class Solution(object):
         
         for i in prices:
             minPrice = min(minPrice,i)
-            profit = i - minPrice
-            maxProfit = max(maxProfit,profit)
+            maxProfit = max(maxProfit,i - minPrice)
         return maxProfit
                 
         
