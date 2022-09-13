@@ -4,8 +4,9 @@ class Solution:
         hash_map = {}
         
         for index,value in enumerate(nums):
-            if value in hash_map and index - hash_map[value] <= k:
+            if value in hash_map and abs(hash_map.get(value) - index) <= k:
                 return True
-            hash_map[value] = index
+            else:
+                hash_map[value] = index
         return False
         
