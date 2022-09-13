@@ -8,9 +8,9 @@ class Solution(object):
         
         hash_map = {}
         
-        for index in range(len(nums)):
-            if nums[index] in hash_map and abs(index - hash_map[nums[index]]) <= k:
+        for index,value in enumerate(nums):
+            if value in hash_map and index - hash_map[value] <= k:
                 return True
-            hash_map[nums[index]] = index
+            hash_map[value] = index
         return False
         
