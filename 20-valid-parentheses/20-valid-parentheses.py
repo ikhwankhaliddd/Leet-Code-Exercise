@@ -1,9 +1,5 @@
-class Solution(object):
-    def isValid(self, s):
-        """
-        :type s: str
-        :rtype: bool
-        """
+class Solution:
+    def isValid(self, s: str) -> bool:
         
         hashMap = {'[' : ']',
                   '(' : ')',
@@ -17,3 +13,4 @@ class Solution(object):
             elif len(ans) == 0 or hashMap[ans.pop()] != i:
                 return False
         return len(ans) == 0
+        
