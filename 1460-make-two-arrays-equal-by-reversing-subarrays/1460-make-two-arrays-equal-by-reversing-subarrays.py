@@ -5,4 +5,8 @@ class Solution(object):
         :type arr: List[int]
         :rtype: bool
         """
-        return sorted(target) == sorted(arr)
+        sortedTarget = sorted(target)
+        sortedArr = sorted(arr)
+        if sortedTarget != sortedArr:
+            return False
+        return True
