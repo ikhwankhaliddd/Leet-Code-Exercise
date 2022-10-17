@@ -4,5 +4,6 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
-        return set(range(1,len(nums)+1)) - set(nums)
+        ans = set(range(1,len(nums)+1)) - set(nums)
+        return ans
         
