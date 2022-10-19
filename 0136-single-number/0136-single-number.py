@@ -10,8 +10,4 @@ class Solution(object):
         # 2a. if one : return its element
         # 2b. else: continue
         
-        for i in nums:
-            if nums.count(i) == 1:
-                return i
-            continue
-        return nums[0]
+        return 2*(sum(set(nums))) - sum(nums)
