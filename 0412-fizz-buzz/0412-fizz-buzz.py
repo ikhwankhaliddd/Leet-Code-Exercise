@@ -4,11 +4,13 @@ class Solution:
         
         for i in range(1,n+1):
             if i % 5 == 0 and i % 3 == 0:
-                ans.append("FizzBuzz")
+                res = "FizzBuzz"
             elif i % 3 == 0 :
-                ans.append("Fizz")
+                res = "Fizz"
             elif i % 5 == 0 :
-                ans.append("Buzz")
+                res = "Buzz"
             else:
-                ans.append(str(i))
+                res = str(i)
+                
+            ans.append(res)
         return ans
