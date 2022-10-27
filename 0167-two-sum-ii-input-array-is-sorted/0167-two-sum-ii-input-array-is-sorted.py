@@ -1,11 +1,15 @@
-class Solution:
-    def twoSum(self, numbers: List[int], target: int) -> List[int]:
-        # initiate ponters value and length of the array:
+class Solution(object):
+    def twoSum(self, numbers, target):
+        """
+        :type numbers: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
         n = len(numbers)
         L = 0
         R = n -1
         
-        while(L < R):
+        while (L < R):
             res = numbers[L] + numbers[R]
             
             if res == target:
@@ -16,4 +20,3 @@ class Solution:
                 R -= 1
             else:
                 return [-1,-1]
-        
