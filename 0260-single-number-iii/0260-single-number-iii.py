@@ -4,10 +4,13 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
+        from collections import Counter
+        
+        counter = Counter(nums)
         ans = []
 
-        for i in nums:
-            if nums.count(i) == 1:
+        for i in counter:
+            if counter[i] == 1:
                 ans.append(i)
             else:
                 continue
