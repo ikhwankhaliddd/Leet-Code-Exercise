@@ -4,11 +4,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        count = 0
-        ans = 0
+        from collections import Counter
+        
+        counter = Counter(nums) # set
 
-        for i in nums:
-            if nums.count(i) == 1:
-                ans += i
+        for i in counter:
+            if counter[i] == 1:
+                return i
             continue
-        return ans
