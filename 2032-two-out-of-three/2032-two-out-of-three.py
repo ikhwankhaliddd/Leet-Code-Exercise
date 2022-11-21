@@ -6,14 +6,14 @@ class Solution(object):
         :type nums3: List[int]
         :rtype: List[int]
         """
-        finalAns = []
-        for i in nums3:
-            if i in nums2 or i in nums1:
-                finalAns.append(i)
-        for j in nums2:
-            if j in nums3 or j in nums1:
-                finalAns.append(j)
-        for l in nums1:
-            if l in nums2 or l in nums3:
-                finalAns.append(l)
+        temp = list(set())
+        
+        res = list(set(nums1)) + list(set(nums2)) + list(set(nums3))
+        
+        finalAns = list(set())
+        
+        for number in res:
+            if number in temp:
+                finalAns.append(number)
+            temp.append(number)
         return list(set(finalAns))
