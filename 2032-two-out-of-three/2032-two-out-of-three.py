@@ -7,7 +7,6 @@ class Solution(object):
         :rtype: List[int]
         """
         finalAns = []
-        counter = 0
         for i in nums3:
             if i in nums2 or i in nums1:
                 finalAns.append(i)
