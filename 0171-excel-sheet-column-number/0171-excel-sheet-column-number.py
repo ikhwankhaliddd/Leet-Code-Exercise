@@ -5,9 +5,9 @@ class Solution(object):
         :rtype: int
         """
         
-        result = 0
+        res = 0
         
         for ch in columnTitle:
-            result = result*26 + ord(ch) - ord('A') + 1
-        return result
+            res = res*26 + ord(ch) - ord('A') + 1
+        return res
         
