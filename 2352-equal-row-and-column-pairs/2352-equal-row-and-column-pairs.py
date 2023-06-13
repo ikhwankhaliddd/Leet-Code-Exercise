@@ -23,4 +23,4 @@ class Solution(object):
                 if grid[x] == arr[y]:
                     count += 1
         return count
-        
+
